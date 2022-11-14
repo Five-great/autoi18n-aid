@@ -1,0 +1,47 @@
+{
+  "name": "autoi18n-aid",
+  "version": "0.0.0-alpha.0",
+  "description": "a Automatic Internationalization Aid",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node ./src/index.ts -P tsconfig.json --no-cache",
+    "build:esm": "rm -rf dist/esm && tsc -p tsconfig.build.json",
+    "build:cjs": "rm -rf dist/cjs && tsc -p tsconfig.build.cjs.json && echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
+    "build": "tsc -P tsconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "e2e": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Five-great/autoi18n-aid.git"
+  },
+  "keywords": [
+    "i18n",
+    "auto",
+    "aid"
+  ],
+  "author": "Five",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Five-great/autoi18n-aid/issues"
+  },
+  "homepage": "https://github.com/Five-great/autoi18n-aid#readme",
+  "dependencies": {
+    "@types/jest": "^29.2.2",
+    "@types/node": "^18.11.9",
+    "http-errors": "^2.0.0",
+    "husky": "^8.0.2",
+    "jest": "^29.3.1",
+    "node-fetch": "2.x.x",
+    "prettier": "^2.7.1",
+    "ts-jest": "^29.0.3",
+    "ts-node-dev": "^2.0.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
